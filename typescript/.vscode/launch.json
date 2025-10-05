@@ -1,0 +1,40 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch Current TS File (ts-node)",
+            "type": "node",
+            "request": "launch",
+            // The file to launch: VS Code variable for the currently open file
+            "program": "${file}", 
+            // Use ts-node as the runtime executable
+            "runtimeExecutable": "ts-node", 
+            // Optional: specify the working directory
+            "cwd": "${workspaceFolder}",
+            // Optional: open the integrated terminal for console output
+            "console": "integratedTerminal", 
+            // For proper source map and breakpoint support
+            "internalConsoleOptions": "neverOpen",
+            "sourceMaps": true,
+            "skipFiles": [
+                "<node_internals>/**"
+            ]
+        },
+
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Program",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${file}",
+            "outFiles": [
+                "${workspaceFolder}/**/*.js"
+            ]
+        }
+    ]
+}
